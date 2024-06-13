@@ -14,3 +14,7 @@ function App() {
     return response.json();
   }
 })
+.then(data => setPosts(data))
+.catch(error => setError(error.message));
+}, []);
+}
