@@ -15,10 +15,10 @@ function App() {
   }
 })
 .then(data => setPosts(data))
-.catch(error => setError(error.message));
+.catch(error => setError("Data fetch failed"));
 }, []);
 if (error) {
-  return {error}
+  return <div> {error} </div>
 }
 return (
   <div>
