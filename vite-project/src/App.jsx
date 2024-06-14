@@ -23,14 +23,14 @@ if (error) {
 return (
   <div>
     <h1>Post</h1>
-    <ul>
-{posts.map(post => (
-<li key={post.id}>
-  <h2>{post.title}</h2>
+    <dd>
+{posts.map((post, index) => (
+<dd key={post.id}>
+  <h2>{index + 1}. {post.title}</h2>
   <p>{post.body}</p>
-</li>
+</dd>
 ))}
-</ul>
+</dd>
 
   </div>
 );
