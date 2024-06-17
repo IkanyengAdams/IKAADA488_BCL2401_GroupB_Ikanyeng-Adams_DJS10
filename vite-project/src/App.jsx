@@ -6,7 +6,7 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
- fetch('https://jsonplaceholder.typicode.com/posts')
+ fetch('https://jsonpjlaceholder.typicode.com/posts')
  .then(response => {
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
@@ -18,7 +18,7 @@ function App() {
 .catch(error => setError("Data fetch failed"));
 }, []);
 if (error) {
-  return <div> {error} </div>
+  return <div><strong style={{ fontSize: '24px' }}>{error}</strong></div>
 }
 return (
   <div>
